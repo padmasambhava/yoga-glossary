@@ -4,7 +4,7 @@
 
 This git repos contains a porposed yoga glossray,
 and stolen from 
-(padmas Yoga Glossary page)[http://www.padma.org.uk/tiki/tiki-index.php?page=Yoga%20Glossary]
+[padmas Yoga Glossary page](http://www.padma.org.uk/tiki/tiki-index.php?page=Yoga%20Glossary)
 
 ### Mission
 
@@ -18,6 +18,12 @@ json, yaml, xml, mobile, cal ;-)
 
 
 
+## Targets
+
+padma glossary at 
+ - later padma.org.uk/glossary
+ - http://www.padma.org.uk/tiki/tiki-index.php?page=Yoga%20Glossary
+also either www sites, and even a wordpress plugin
 
 
 
