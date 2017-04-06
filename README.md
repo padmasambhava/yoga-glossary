@@ -4,11 +4,11 @@
 
 This git repos contains a porposed yoga glossray,
 and stolen from 
-(padma/tiki-index.php?page=Yoga%20Glossary)[http://www.padma.org.uk/tiki/tiki-index.php?page=Yoga%20Glossary]
+(padmas Yoga Glossary page)[http://www.padma.org.uk/tiki/tiki-index.php?page=Yoga%20Glossary]
 
 ### Mission
 
-- The glossary is ripe for consolidation, and team community effort
+- The glossary is ripe for consolidation, and team community effort #1
 - All u yoga experts go in and fix the grammars, via pull requests
 
 ### Outputs
