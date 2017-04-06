@@ -1,12 +1,24 @@
 # yoga-glossary
 
-## The cunning plan
+## Overview
 
-@pedromorgan the developer at Padma Olde South wales,
-and a meniw of terms and definitions, and 
-the (padma/tiki-index.php?page=Yoga%20Glossary)[http://www.padma.org.uk/tiki/tiki-index.php?page=Yoga%20Glossary
-is the root of this cunning plan.
+This git repos contains a porposed yoga glossray,
+and stolen from 
+(padma/tiki-index.php?page=Yoga%20Glossary)[http://www.padma.org.uk/tiki/tiki-index.php?page=Yoga%20Glossary]
 
-So this is ripe for consolidation and team community effort.
-looking at you atma@padma, KK@ richanrd et all...
+### Mission
+
+- The glossary is ripe for consolidation, and team community effort
+- All u yoga experts go in and fix the grammars, via pull requests
+
+### Outputs
+
+A script that converts into whatever one machine in code to another..
+json, yaml, xml, mobile, cal ;-)
+
+
+
+
+
+
 
