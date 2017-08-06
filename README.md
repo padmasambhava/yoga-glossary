@@ -2,9 +2,8 @@
 
 ## Overview
 
-This git repos contains a porposed yoga glossray,
-and stolen from 
-[padmas Yoga Glossary page](http://www.padma.org.uk/tiki/tiki-index.php?page=Yoga%20Glossary)
+This git repos contains a porposed yoga glossary,
+and stolen from [padmas Yoga Glossary page](http://www.padma.org.uk/tiki/tiki-index.php?page=Yoga%20Glossary)
 
 ### Mission
 
@@ -13,17 +12,12 @@ and stolen from
 
 ### Outputs
 
-A script that converts into whatever one machine in code to another..
-json, yaml, xml, mobile, cal ;-)
+- `yoga-glossary.json` - indented and human readable version
+- `yoga-glossary-min.json` - compact machine readable version
+- visit the (android app)[https://github.com/padmasambhava/yoga-glossary-android]
 
 
 
-## Targets
-
-padma glossary at 
- - later padma.org.uk/glossary
- - http://www.padma.org.uk/tiki/tiki-index.php?page=Yoga%20Glossary
-also either www sites, and even a wordpress plugin
 
 
 

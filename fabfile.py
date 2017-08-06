@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+import json
 import yaml
 
 from fabric.api import env, local, run, lcd,  cd, sudo, warn_only, prompt
@@ -10,89 +11,41 @@ ROOT = os.path.dirname(os.path.abspath(__file__)) + "/"
 
 GLOSS_DIR = os.path.join(ROOT, "yoga_glossary")
 
-def _stripped(parts):
-    ret = []
-    for p in parts:
-        s = p.replace("\t", "")
-        s = s.strip()
-        if len(s) == 0:
-            ret.append(None)
-        else:
-            ret.append(s)
-    return ret
-        
-    
 
+def _read_yaml(file_path):
+    print file_path
+    with open(file_path, 'r') as stream:
+        try:
+            return yaml.load(stream)
+        except yaml.YAMLError as exc:
+            print(exc)
 
-def imp():
+def yg_build():
     
     dic = {}
+    lst = []
     
-    
-    with open("Raw.txt", "r") as f:
-        contents = f.read()
+    ## need to yaml from all subs, and knock out
+    a2z_dirs = os.listdir(GLOSS_DIR)
+    for az_dir in sorted(a2z_dirs, key=str.lower):   
         
-        lines = contents.split("\n")
-        
-        for raw_line in lines:
-            line = raw_line.strip()
-            if "–" in line:
-                # means we got a term - description
-                parts = line.split("–")
-                if len(parts) > 1:
-                    # split into parts
-                    sparts =  _stripped(parts)	
-                    
-                    # the terms is first elem
-                    term = sparts[0].replace("/", ", ")
-                    # the a is the first letter of term
-                    az = term[0].lower()
-                    a2z_dir = os.path.join(GLOSS_DIR, az)
-                    #print "=",  a2z_dir
-                    if not os.path.exists(a2z_dir):
-                        os.makedirs(a2z_dir)
-                    #data = a2z[a_char]
-                    
-                    
-                    # the defs are in elent t add
-                    defs = []
-                    defs_raw = " ".join(sparts[1:])
-                    
-                    ## rips ' of start and end
-                    if defs_raw.startswith("'") and defs_raw.endswith("'"):
-                        defs_raw = defs_raw[1:-1]
-                    if ";" in defs_raw:
-                        defs = _stripped(defs_raw.split(";"))
-                    else:
-                        defs = [defs_raw]
-                    
-                    stuff = dict(term=term, description=defs)
-                    term_file_name = term.replace(" ", "_").lower() + ".yaml"
-                    out_file = os.path.join(a2z_dir, term_file_name)
-                    
-                    ## we have to create bullshit comment
-                    ## and serialise the files aout in a particular order in our case
-                    # from this point forward, it is not expected
-                    # that the files should ba changed in any way
-                    # apart from version changes, and pull requests etc etc..
-                    out_str = "term: %s\n" % term
-                    out_str += "definition: \n"
-                    for da in defs:
-                        out_str += "  - %s\n" % da
-                        
-                    print out_file
-                    
-                    with open(out_file, "w") as ff:
-                        ff.write(out_str)
-                    
-                else:
-                    #print "  ??:", parts
-                    pass
-            else:
-                #print "   ?:", line
-                pass
-    print dic.keys()		
-
-
+        yaml_files =  os.listdir(os.path.join(GLOSS_DIR, az_dir))
+        for yfile in sorted(yaml_files, key=str.lower):
+            print "------------"
+            data = _read_yaml(os.path.join(GLOSS_DIR, az_dir, yfile))
+            
+            print data['term']
+            lst.append(data)
+            dic[data['term']] = data['definition']
+                
+                
+    with open(os.path.join(ROOT, "yoga-glossary.json"), "w") as f:
+            f.write( json.dumps( lst, sort_keys=True, indent=4, separators=(',', ': ')) )
+            f.close()
+    with open(os.path.join(ROOT, "yoga-glossary-min.json"), "w") as f:
+            f.write( json.dumps( lst  ) )
+            f.close()          
+            
+    local("cp %syoga-glossary-min.json /home/padma/yoga-glossary-android/app/src/main/assets/yoga-glossary.json" % ROOT)
             
         
