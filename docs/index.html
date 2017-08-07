@@ -1,1 +1,2861 @@
-<h1>YES</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Yoga Glossary</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <style>
+        	.row{
+		    margin-top:40px;
+		    padding: 0 10px;
+		}
+		.clickable{
+		    cursor: pointer;   
+		}
+
+		.panel-heading div {
+			margin-top: -18px;
+			font-size: 15px;
+
+		}
+		.panel-heading div span{
+			margin-left:5px;
+		}
+		.panel-body{
+			display: none;
+		}
+		
+		#dev-table{
+		border: 0;
+		}
+		.panel-primary {
+			border-color: #cccccc;
+		}
+		.panel-heading {
+			background-image: none;
+			background-color: #dddddd !important;
+			
+		}
+		#custom-bootstrap-menu.navbar-default .navbar-brand {
+    color: rgba(255, 255, 255, 1);
+}
+#custom-bootstrap-menu.navbar-default {
+    font-size: 14px;
+    background-color: rgba(82, 156, 66, 1);
+    background: -webkit-linear-gradient(top, rgba(98, 174, 81, 1) 0%, rgba(82, 156, 66, 1) 100%);
+    background: linear-gradient(to bottom, rgba(98, 174, 81, 1) 0%, rgba(82, 156, 66, 1) 100%);
+    border-width: 0px;
+    border-radius: 0px;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
+    color: rgba(232, 225, 225, 1);
+    background-color: rgba(87, 157, 71, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(248, 248, 248, 0);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(108, 199, 88, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+    border-color: #6cc758;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+    background-color: #6cc758;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: #6cc758;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #529c42;
+}
+
+		</style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default" id="custom-bootstrap-menu" >
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Yoga Glossary</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="https://github.com/padmasambhava/yoga-glossary">Project</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<div class="container">
+    <!-- <h1>Click the filter icon <small>(<i class="glyphicon glyphicon-filter"></i>)</small></h1>-->
+    <div class="row">
+        <div class="col-md-8">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Click the filter icon &gt;&gt;</h3>
+                    <div class="pull-right">
+                            <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+                                    <i class="glyphicon glyphicon-filter"></i>
+                            </span>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter" />
+                </div>
+                <table class="table table-hover" id="dev-table">
+                    <thead>
+                        <tr>
+                            <th>Term</th>
+                            <th>Definition</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+<tr>
+	<td><b>Abhaya mudra</b></td>
+	<td><ul><ul><li>gesture of fearlessness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Abhinivesha</b></td>
+	<td><ul><ul><li>fear of death</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Adhara mudra</b></td>
+	<td><ul><ul><li>perineal mudra</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Adharas</b></td>
+	<td><ul><ul><li>16 bases which support the body</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Adharmic</b></td>
+	<td><ul><ul><li>not fulfilling one's natural role in life</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Advaita</b></td>
+	<td><ul><ul><li>non-dual experience</li> <li>unity of the individual soul</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Agni</b></td>
+	<td><ul><ul><li>fire, in all its aspects. Agni encompasses all fires, from the densest (the power of digestion) to the most rarefied (the essence of cosmic fire).</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Agni mandala</b></td>
+	<td><ul><ul><li>zone of fire</li> <li>visualizing entire body in the form of agni</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Agnisar kriya</b></td>
+	<td><ul><ul><li>practice of emptying the lungs and pumping the stomach to strengthen the diaphragm and lower stomach region</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Agocharam</b></td>
+	<td><ul><ul><li>beyond sensory perception</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Agochari mudra</b></td>
+	<td><ul><ul><li>another name for nasikagra drishti</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Aham Bhramasmi</b></td>
+	<td><ul><ul><li>vedic mantra, I am Brahman'</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Ahamkara</b></td>
+	<td><ul><ul><li>ego</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Ahimsa</b></td>
+	<td><ul><ul><li>absence of violence from within</li> <li>non-violence</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Ajapa japa</b></td>
+	<td><ul><ul><li>continuous, spontaneous repetition of mantra</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Ajna chakra</b></td>
+	<td><ul><ul><li>third eye</li> <li>command center</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Ajna mandala</b></td>
+	<td><ul><ul><li>ajna chakra symbol at the eyebrow center</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Akara</b></td>
+	<td><ul><ul><li>form, link, continuity</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Akasha</b></td>
+	<td><ul><ul><li>space</li> <li>ether</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Akasha tattwa</b></td>
+	<td><ul><ul><li>ether element</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Akashi mudra</b></td>
+	<td><ul><ul><li>awareness of the inner space</li> <li>practice of the external stage of dharana</li> <li>gazing into space with the head tilted back</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Akhanda kirtan</b></td>
+	<td><ul><ul><li>ongoing, unbroken kirtan</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Amaroli</b></td>
+	<td><ul><ul><li>auto-urine procedure</li> <li>drinking of one's own urine in order to detoxify the body and develop stamina and vitality</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Anadi</b></td>
+	<td><ul><ul><li>endless</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Anahada nada</b></td>
+	<td><ul><ul><li>unheard, unstuck sound</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Anahata chakra</b></td>
+	<td><ul><ul><li>heart chakra or emotional center</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Anahata kshetram</b></td>
+	<td><ul><ul><li>trigger point of anahata chakra</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Ananda</b></td>
+	<td><ul><ul><li>everlasting bliss</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Ananda samadhi</b></td>
+	<td><ul><ul><li>fourth state of samadhi</li> <li>blissful absorption</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Anandamaya kosha</b></td>
+	<td><ul><ul><li>sheath or body of bliss, beatitude</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Annamaya kosha</b></td>
+	<td><ul><ul><li>sheath or body of matter</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Antah</b></td>
+	<td><ul><ul><li>inner</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Antah karana</b></td>
+	<td><ul><ul><li>inner instrument</li> <li>experienced or manifest mind which includes the four aspects of manas, buddhi, chitta and ahamkara</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Antar kumbhaka</b></td>
+	<td><ul><ul><li>internal breathe retention</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Antar lakshya</b></td>
+	<td><ul><ul><li>internal aim to be aspired for in dharana</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Antar mouna</b></td>
+	<td><ul><ul><li>inner silence</li> <li>meditative technique</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Antaranga yoga</b></td>
+	<td><ul><ul><li>four internal stages of raja yoga</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Anuman</b></td>
+	<td><ul><ul><li>inference</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Anusandhana</b></td>
+	<td><ul><ul><li>discovery</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Apah</b></td>
+	<td><ul><ul><li>water</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Apana</b></td>
+	<td><ul><ul><li>sub-prana, which is located in the lower abdominal region, responsible for elimination and reproduction</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Aparigraha</b></td>
+	<td><ul><ul><li>non-possessiveness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Ardhanareshwara</b></td>
+	<td><ul><ul><li>form of Shiva, which is half male and half female</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Arjuna</b></td>
+	<td><ul><ul><li>one of the five Pandava back brothers</li> <li>he to whom Lord Krishna addressed the Bhagavad Gita</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Artha</b></td>
+	<td><ul><ul><li>material need</li> <li>wealth</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Asamprajnata samadhi</b></td>
+	<td><ul><ul><li>transitional stage of samadhi where the traces of the mind become active according to their intensity</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Asamprayoge</b></td>
+	<td><ul><ul><li>not coming into contact</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Asana</b></td>
+	<td><ul><ul><li>a physical posture in which one is at ease and in harmony with oneself</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Asevitah</b></td>
+	<td><ul><ul><li>faith</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Ashrama</b></td>
+	<td><ul><ul><li>four stages of life</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Ashtanga yoga</b></td>
+	<td><ul><ul><li>eightfold path of yoga</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Ashwini mudra</b></td>
+	<td><ul><ul><li>contraction of anal sphincter</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Asmita</b></td>
+	<td><ul><ul><li>state where the ego and the sense of individuality are completely transcended and there is only pure awareness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Asmita klesha</b></td>
+	<td><ul><ul><li>feeling of 'I' identified with an action</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Asmita samadhi</b></td>
+	<td><ul><ul><li>fifth state of samadhi</li> <li>dissolution of ego</li> <li>merging of body, mind and soul</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Asteya</b></td>
+	<td><ul><ul><li>honesty</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Asthi</b></td>
+	<td><ul><ul><li>bone found in the body tissues</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Atadroop pratishtha</b></td>
+	<td><ul><ul><li>knowledge of false identity</li> <li>inability to link name with form</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Atma</b></td>
+	<td><ul><ul><li>individual soul</li> <li>spirit</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Aum</b></td>
+	<td><ul><ul><li>primordial sound</li> <li>mantra</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Avachetan</b></td>
+	<td><ul><ul><li>subconscious</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Avidya</b></td>
+	<td><ul><ul><li>ignorance</li> <li>lack of conscious awareness</li> <li>mistaking the non-eternal for the eternal</li> <li>confined cognition</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Avyakta</b></td>
+	<td><ul><ul><li>unmanifest</li> <li>unseen</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Awarohan</b></td>
+	<td><ul><ul><li>descending passage to the subtle body</li> <li>spinal passage</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Ayurveda</b></td>
+	<td><ul><ul><li>vedic system of medical diagnosis and treatment</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Bahir</b></td>
+	<td><ul><ul><li>external</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Bahir kumbhaka</b></td>
+	<td><ul><ul><li>external breath retention</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Bahir lakshya</b></td>
+	<td><ul><ul><li>external aim to focus on in order to achieve concentration</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Bahiranga yoga</b></td>
+	<td><ul><ul><li>four external stages of raja yoga</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Baikhari</b></td>
+	<td><ul><ul><li>audible sound produced by striking two objects</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Bandha</b></td>
+	<td><ul><ul><li>psychic lock that concentrates the flow of energy in the body at one point or plexus</li> <li>postural contraction of the body</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Basti</b></td>
+	<td><ul><ul><li>excretory cleansing technique for the intestines and colon</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Beeja</b></td>
+	<td><ul><ul><li>seed</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Bhadrasana</b></td>
+	<td><ul><ul><li>gentleman's pose</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Bhagavad Gita</b></td>
+	<td><ul><ul><li>Lord Krishna's discourse to Arjuna delivered on the battlefield of Kurukshetra during the great Mahabharata war</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Bhaja Govindam</b></td>
+	<td><ul><ul><li>ode to Shakti by Adi Shankaracharya</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Bhakti</b></td>
+	<td><ul><ul><li>devotion</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Bhal bhati</b></td>
+	<td><ul><ul><li>forehead bellows</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Bhastrika pranayama</b></td>
+	<td><ul><ul><li>'bellows' breathing technique
+</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Bhati</b></td>
+	<td><ul><ul><li>to shine</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Bhava samadhi</b></td>
+	<td><ul><ul><li>absorption' in meditation due to emotional cause, e.g. kirtan</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Bheda</b></td>
+	<td><ul><ul><li>to pass through, pierce, purify</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Bhoochari mudra</b></td>
+	<td><ul><ul><li>practice of the external stage of dharana</li> <li>gazing into space after focusing on the finger nail of the hand held in front of the face</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Bhoota</b></td>
+	<td><ul><ul><li>element</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Bhrumadhya</b></td>
+	<td><ul><ul><li>eyebrow center</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Bhrumadhya drishti</b></td>
+	<td><ul><ul><li>eyebrow center gazing</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Bindu visarga</b></td>
+	<td><ul><ul><li>center or source of individual creation from where the psychic vibrations first emanate</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Brahma</b></td>
+	<td><ul><ul><li>Lord of creation</li> <li>manifest force of life and creation</li> <li>potentiality of mooladhara chakra</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Brahma dhyana</b></td>
+	<td><ul><ul><li>meditation on the concept of Brahma</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Brahma granthi</b></td>
+	<td><ul><ul><li>perineal knot or psychic block</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Brahma nadi</b></td>
+	<td><ul><ul><li>subtle pranic flow within sushumna nadi through which kundalini ascends</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Brahmacharya</b></td>
+	<td><ul><ul><li>one who lives in higher consciousness</li> <li>sexual control</li> <li>redirection of sexual energy towards spiritual or meditational practices</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Brahmacharya ashrama</b></td>
+	<td><ul><ul><li>first stage of life up to 25 years, which is devoted to study and learning</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Brahman</b></td>
+	<td><ul><ul><li>absolute reality</li> <li>ever-expanding consciousness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Buddha</b></td>
+	<td><ul><ul><li>the enlightened one</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Buddhi</b></td>
+	<td><ul><ul><li>discerning, discriminating aspect of mind</li> <li>from the root 'bodh', 'to be aware of', 'to know'</li> <li>intellect.</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Chaitanya jyoti</b></td>
+	<td><ul><ul><li>eternal flame of spirit</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Chakra</b></td>
+	<td><ul><ul><li>psychic center in the subtle body</li> <li>circle, wheel or vortex of energy</li> <li>conjugation point of the nadis</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Chakrasana</b></td>
+	<td><ul><ul><li>wheel pose</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Chandra bheda pranayama</b></td>
+	<td><ul><ul><li>breathing technique that pierces and purifies the ida nadi</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Chandra mandala</b></td>
+	<td><ul><ul><li>another name for ajna mandala</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Charvak</b></td>
+	<td><ul><ul><li>one of the six darshana or systems of Indian thought</li> <li>philosophy which accepts only the perceivable phenomena as valid, not the unperceivable</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Chaturmas</b></td>
+	<td><ul><ul><li>four months of the rainy season</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Chetana</b></td>
+	<td><ul><ul><li>consciousness</li> <li>unmanifest aspect of consciousness and energy</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Chidakasha</b></td>
+	<td><ul><ul><li>space of consciousness experienced in the head region</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Chidakasha dharana</b></td>
+	<td><ul><ul><li>technique of meditation involving awareness of the chidakasha</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Chin mudra</b></td>
+	<td><ul><ul><li>attitude of chitta or consciousness</li> <li>upward hand position with thumb and first finger touching</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Chit</b></td>
+	<td><ul><ul><li>eternal consciousness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Chit shakti</b></td>
+	<td><ul><ul><li>mental force governing the, subtle dimensions</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Chitta</b></td>
+	<td><ul><ul><li>individual consciousness, including the subconscious and unconscious levels of mind</li> <li>memory, thinking, concentration, attention, enquiry</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Chitta vritti</b></td>
+	<td><ul><ul><li>mental modification</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Daharakasha</b></td>
+	<td><ul><ul><li>lower or deep space</li> <li>encompassing mooladhara, swadhisthana and manipura</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Daharakasha dharana</b></td>
+	<td><ul><ul><li>concentration on the symbols of chakra and tattwa within the lower space</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Dakshina nadi</b></td>
+	<td><ul><ul><li>another name for pingala nadi</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Danta dhauti</b></td>
+	<td><ul><ul><li>method of cleaning the teeth</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Darshana</b></td>
+	<td><ul><ul><li>to glimpse</li> <li>to see</li> <li>to have a vision</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Deerghakaala</b></td>
+	<td><ul><ul><li>for a long period of time</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Dehasamya</b></td>
+	<td><ul><ul><li>body stillness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Desha</b></td>
+	<td><ul><ul><li>place</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Deva tattwa</b></td>
+	<td><ul><ul><li>{'first tattwa': 'the divine element'}</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Devadutta</b></td>
+	<td><ul><ul><li>minor prana</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Devata</b></td>
+	<td><ul><ul><li>deity</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Devi</b></td>
+	<td><ul><ul><li>female deity</li> <li>goddess</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Dhananjaya</b></td>
+	<td><ul><ul><li>minor prana</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Dhara</b></td>
+	<td><ul><ul><li>stream, flow</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Dharana</b></td>
+	<td><ul><ul><li>holding or binding of the mind to one point</li> <li>concentration</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Dharma</b></td>
+	<td><ul><ul><li>the natural role we have to play in life</li> <li>ethical law</li> <li>duty</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Dhatu</b></td>
+	<td><ul><ul><li>layers of tissue in the body</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Dhauti</b></td>
+	<td><ul><ul><li>cleansing practices for the stomach region involving gentle washing with air, water, cloth or stick</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Dhyana</b></td>
+	<td><ul><ul><li>meditation</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Divya</b></td>
+	<td><ul><ul><li>divine</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Divya loka</b></td>
+	<td><ul><ul><li>plane of divine or transcendental experience</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Divyabhava</b></td>
+	<td><ul><ul><li>divine feeling</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Doshas</b></td>
+	<td><ul><ul><li>humors of the physical body</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Drashta</b></td>
+	<td><ul><ul><li>seer, observer</li> <li>awareness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Dridha bhoomihi</b></td>
+	<td><ul><ul><li>solid foundation</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Drishti</b></td>
+	<td><ul><ul><li>vision, eyesight</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Drishtisamya</b></td>
+	<td><ul><ul><li>stillness of vision</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Drona</b></td>
+	<td><ul><ul><li>teacher of the Pandava and Kaurava princes from the Mahabharata epic</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Durga</b></td>
+	<td><ul><ul><li>devi</li> <li>goddess</li> <li>representing energy</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Dwesha</b></td>
+	<td><ul><ul><li>repulsion, aversion</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Garbha</b></td>
+	<td><ul><ul><li>womb Ida</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Gayatri mantra</b></td>
+	<td><ul><ul><li>vedic mantra of 24 matras or syllabes</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Gherand Samhita</b></td>
+	<td><ul><ul><li>traditional yogic text by Rishi Gherand</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Gomukasana</b></td>
+	<td><ul><ul><li>cow face pose</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Granthis</b></td>
+	<td><ul><ul><li>psychic knots</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Grihastha ashrama</b></td>
+	<td><ul><ul><li>second stage of life from 25-50 years</li> <li>householder</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Guna</b></td>
+	<td><ul><ul><li>attribute, quality or nature of the phenomenal world</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Guna rahita akasha</b></td>
+	<td><ul><ul><li>one of the five mental spaces of vyoma panchaka</li> <li>attributeless space</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Gupta nadi</b></td>
+	<td><ul><ul><li>runs from the knees along the inside of the thighs into the perineum</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Guru</b></td>
+	<td><ul><ul><li>one who dispels darkness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Hasta uttanasana</b></td>
+	<td><ul><ul><li>a pre-pranayama exercise</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Hatha yoga</b></td>
+	<td><ul><ul><li>yoga of attaining physical and mental purity, and chanelling of the pranas in the body</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Hatha Yoga Pradipika</b></td>
+	<td><ul><ul><li>yogic text, 'light on hatha yoga'</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Himsa</b></td>
+	<td><ul><ul><li>anything which disrupts the natural flow of human perception and consciousness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Hiranya</b></td>
+	<td><ul><ul><li>golden</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Hiranyagarbha</b></td>
+	<td><ul><ul><li>golden womb</li> <li>golden egg</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Hreem</b></td>
+	<td><ul><ul><li>beeja mantra</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Hridayakasha</b></td>
+	<td><ul><ul><li>space of the heart, experienced between manipura and vishuddhi chakra</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Hridayakasha dharana</b></td>
+	<td><ul><ul><li>vedic meditative process involving concentration on the heart space</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Ida nadi</b></td>
+	<td><ul><ul><li>major pranic channel in the body</li> <li>passive aspect of prana manifesting as mental force, chit shakti</li> <li>lunar force governing the manifest subtle dimension</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Indra</b></td>
+	<td><ul><ul><li>king of the vedic gods</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Indriyas</b></td>
+	<td><ul><ul><li>sensory organs</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Ishwara</b></td>
+	<td><ul><ul><li>higher reality</li> <li>non-decaying principle of Samkhya philosophy</li> <li>unmanifest existence</li> <li>being</li> <li>non-changing principle or quality</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Ishwara pranidhana</b></td>
+	<td><ul><ul><li>cultivation of faith in the higher reality</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Iti</b></td>
+	<td><ul><ul><li>'through' or 'thus'
+</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Jagriti</b></td>
+	<td><ul><ul><li>wakefulness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Jala</b></td>
+	<td><ul><ul><li>water</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Jala neti</b></td>
+	<td><ul><ul><li>nasal cleansing using warm and saline water, or oil, ghee, milk, yogurt or amaroli</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Jalandhara bandha</b></td>
+	<td><ul><ul><li>chin lock</li> <li>technique that frees ' the blockages of rudra granthi</li> <li>controls the network of nadis, nerves and blood vessels flowing to the brain</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Janma chakra</b></td>
+	<td><ul><ul><li>wheel of life</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Japa yoga</b></td>
+	<td><ul><ul><li>yoga of mantra repetition</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Jaya</b></td>
+	<td><ul><ul><li>victory, success</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Jiva</b></td>
+	<td><ul><ul><li>individual identity</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Jnana</b></td>
+	<td><ul><ul><li>intuitive knowledge</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Jnana kanda</b></td>
+	<td><ul><ul><li>path of knowledge</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Jnana mudra</b></td>
+	<td><ul><ul><li>hand position that joins fingers and thumb</li> <li>gesture of intuitive knowledge</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Jnana yoga</b></td>
+	<td><ul><ul><li>yoga of knowledge and wisdom attained through spontaneous self-analysis and investigation of abstract or speculative ideas</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Jnanendriyas</b></td>
+	<td><ul><ul><li>five sensory organs</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Jyoti mandir</b></td>
+	<td><ul><ul><li>temple of light</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kagra</b></td>
+	<td><ul><ul><li>tip</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kaivalya</b></td>
+	<td><ul><ul><li>state of consciousness beyond duality</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kala</b></td>
+	<td><ul><ul><li>time</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kala loka</b></td>
+	<td><ul><ul><li>plane that comes under the influence of time and its secondary aspect, space</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kama</b></td>
+	<td><ul><ul><li>emotional need or fulfillment</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kama dhauti</b></td>
+	<td><ul><ul><li>ways to clean the ears</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kapalbhati pranayama</b></td>
+	<td><ul><ul><li>frontal brain bellowing technique used to raise the pranic energy of the body and center it at ajna chakra</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kapalshodhan</b></td>
+	<td><ul><ul><li>variation of kapalbhati</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kapha</b></td>
+	<td><ul><ul><li>phlegm, one of the three humors described in ayurveda</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Karana</b></td>
+	<td><ul><ul><li>cause</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kari</b></td>
+	<td><ul><ul><li>that which produces</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Karma</b></td>
+	<td><ul><ul><li>action</li> <li>law of cause and effect, which shapes the destiny of each individual</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Karma kanda</b></td>
+	<td><ul><ul><li>path of ritual</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Karma shaya</b></td>
+	<td><ul><ul><li>deep layers of consciousness where the karma are stored in the form of impressions, symbols or archetypes</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Karma yoga</b></td>
+	<td><ul><ul><li>yoga of action</li> <li>action performed with meditative awareness</li> <li>yoga of dynamic meditation</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Karmendriyas</b></td>
+	<td><ul><ul><li>five physical organs of action (feet, hands, speech, excretory and reproductive organs)</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Khechad mudra</b></td>
+	<td><ul><ul><li>tongue lock</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kirtan</b></td>
+	<td><ul><ul><li>singing of God's name</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kleem</b></td>
+	<td><ul><ul><li>beeja mantra</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Koorma</b></td>
+	<td><ul><ul><li>tortoise</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Koormasana</b></td>
+	<td><ul><ul><li>tortoise pose</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kosha</b></td>
+	<td><ul><ul><li>sheath or body</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Krishna</b></td>
+	<td><ul><ul><li>incarnation of Vishnu</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kriya</b></td>
+	<td><ul><ul><li>action or motion</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kriya yoga</b></td>
+	<td><ul><ul><li>practices of kundalini yoga</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kukkutasana</b></td>
+	<td><ul><ul><li>cockerel pose</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kumbha</b></td>
+	<td><ul><ul><li>a pot</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kumbhaka</b></td>
+	<td><ul><ul><li>internal or external retention of breath</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kundalini</b></td>
+	<td><ul><ul><li>serpent power</li> <li>spiritual energy</li> <li>evolutionary potential</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kundalini yoga</b></td>
+	<td><ul><ul><li>path of yoga, which awakens the dormant spiritual force</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kunjal kriya</b></td>
+	<td><ul><ul><li>cleansing the stomach by voluntary vomiting using warm saline water</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Kuru princes</b></td>
+	<td><ul><ul><li>opponents of the Pandava princes in the Mahabharata epic</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Laghoo</b></td>
+	<td><ul><ul><li>short form</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Lakshya</b></td>
+	<td><ul><ul><li>aim</li> <li>stage</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Lalana upa chakra</b></td>
+	<td><ul><ul><li>minor chakra at the back of the throat</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Lam</b></td>
+	<td><ul><ul><li>beeja mantra of mooladhara chakra</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Laya</b></td>
+	<td><ul><ul><li>to dissolve</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Laya yoga</b></td>
+	<td><ul><ul><li>yoga of conscious dissolution of individuality</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Lokas</b></td>
+	<td><ul><ul><li>seven planes of consciousness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Madhya</b></td>
+	<td><ul><ul><li>intermediate</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Madhya lakshya</b></td>
+	<td><ul><ul><li>intermediate stage</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Maha</b></td>
+	<td><ul><ul><li>great</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Maha bheda mudra</b></td>
+	<td><ul><ul><li>great piercing attitude</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Maha mudra</b></td>
+	<td><ul><ul><li>great attitude</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Maha samadhi</b></td>
+	<td><ul><ul><li>final liberation experienced on the departure of the spirit from the body</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mahabandha</b></td>
+	<td><ul><ul><li>great lock</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mahabharata</b></td>
+	<td><ul><ul><li>great epic of ancient India</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mahakasha</b></td>
+	<td><ul><ul><li>one of the five mental spaces of vyoma panchaka</li> <li>bright like the middle of the sun</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mahamrityunjaya mantra</b></td>
+	<td><ul><ul><li>a long universal mantra</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mahaprana</b></td>
+	<td><ul><ul><li>prana in its cosmic, unmanifest aspect</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mahat</b></td>
+	<td><ul><ul><li>greater mind</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Majja</b></td>
+	<td><ul><ul><li>nerves found in the body tissues</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mala</b></td>
+	<td><ul><ul><li>garland</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mananat</b></td>
+	<td><ul><ul><li>bondage of mind</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Manas</b></td>
+	<td><ul><ul><li>mind</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Manasi</b></td>
+	<td><ul><ul><li>mental</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mandala</b></td>
+	<td><ul><ul><li>zone</li> <li>area</li> <li>pictorial representation</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Manduki</b></td>
+	<td><ul><ul><li>frog</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Manduki mudra</b></td>
+	<td><ul><ul><li>frog attitude</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mandukya Upanishad</b></td>
+	<td><ul><ul><li>one of the major Upanishads, which describes the three states of consciousness, represented by the three syllables of AUM</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Manipura chakra</b></td>
+	<td><ul><ul><li>psychic center behind the navel, associated with vitality and energy</li> <li>city of jewels</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Manomaya kosha</b></td>
+	<td><ul><ul><li>mental sheath or body Mantra? sound or vibration of power, which liberates the mind from bondage</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mantra yoga</b></td>
+	<td><ul><ul><li>path of yogawhich liberates the mind through sound vibration</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mantraha</b></td>
+	<td><ul><ul><li>force of vibration</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Maya</b></td>
+	<td><ul><ul><li>illusion</li> <li>partial understanding</li> <li>wrong or false notions about self-identity</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mayurasana</b></td>
+	<td><ul><ul><li>peacock pose</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Medha</b></td>
+	<td><ul><ul><li>fat found in the body tissues</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mehdra</b></td>
+	<td><ul><ul><li>plexus of the pranic body</li> <li>nadi plexus located just a few centimeters below the nave</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mitahara</b></td>
+	<td><ul><ul><li>balanced diet</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Moksha</b></td>
+	<td><ul><ul><li>liberation</li> <li>freedom</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Moola</b></td>
+	<td><ul><ul><li>root</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Moola bandha</b></td>
+	<td><ul><ul><li>perineal lock</li> <li>technique for locating and awakening mooladhara chakra</li> <li>used to release brahma granthi</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mooladhara anusandhana</b></td>
+	<td><ul><ul><li>discovery of mooladhara chakra</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mooladhara chakra</b></td>
+	<td><ul><ul><li>root chakra, situated at the perineum</li> <li>seat of the primal energy</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mooladhara dhyana</b></td>
+	<td><ul><ul><li>practice involving visualization of mooladhara chakra and sensing the vortex of energy at this point</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mouna</b></td>
+	<td><ul><ul><li>silence</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mrityu tattwa</b></td>
+	<td><ul><ul><li>decay able element</li> <li>manifest aspect of tattwa</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mudra</b></td>
+	<td><ul><ul><li>psychic gesture</li> <li>psycho-physiological posture, movement or attitude.</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mukti</b></td>
+	<td><ul><ul><li>liberation</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mumsa</b></td>
+	<td><ul><ul><li>muscle found in the body tissues</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Mumukshutva</b></td>
+	<td><ul><ul><li>desire for liberation</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Nabho mudra</b></td>
+	<td><ul><ul><li>another name for khechari mudra</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Nada</b></td>
+	<td><ul><ul><li>psychic or internal sound</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Nada Yoga</b></td>
+	<td><ul><ul><li>yoga of internal sound</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Nadi</b></td>
+	<td><ul><ul><li>prana flow or channel</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Nadi shodhana</b></td>
+	<td><ul><ul><li>purification of nadis</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Nadi shodhana pranayama</b></td>
+	<td><ul><ul><li>practice of alternate nostril breathing by which the pranic channels are purified</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Naga</b></td>
+	<td><ul><ul><li>one of the five minor pranas</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Nairantarya</b></td>
+	<td><ul><ul><li>continuously without a break</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Nara</b></td>
+	<td><ul><ul><li>decaying principle</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Nashwara</b></td>
+	<td><ul><ul><li>decaying principle described in Samkhya philosophy</li> <li>manifest existence</li> <li>becoming</li> <li>changeable</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Nasi</b></td>
+	<td><ul><ul><li>nose</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Nasikagra drishti</b></td>
+	<td><ul><ul><li>nose tip gazing</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Nasikagra upa chakra</b></td>
+	<td><ul><ul><li>minor chakra at the nose tip</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Natya mudras</b></td>
+	<td><ul><ul><li>dance mudras that express different attitudes or moods, such as love or anger</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Nauli</b></td>
+	<td><ul><ul><li>practice of rotation of the abdominal muscles</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Neti</b></td>
+	<td><ul><ul><li>cleansing practice for the head</li> <li>nasal cleaning</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Nidra</b></td>
+	<td><ul><ul><li>deep sleep</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Nigraha</b></td>
+	<td><ul><ul><li>control</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Nirbeeja samadhi</b></td>
+	<td><ul><ul><li>final state of samadhi where there is absorption without seed</li> <li>total dissolution</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Nirguna dhyana</b></td>
+	<td><ul><ul><li>meditation without gunas or qualities</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Nirvichara dhyana</b></td>
+	<td><ul><ul><li>meditation without special attributes</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Nirvichara samadhi</b></td>
+	<td><ul><ul><li>transitional stage of samadhi involving purification of memory which gives rise to true knowledge of the object of perception</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Niyama</b></td>
+	<td><ul><ul><li>inner discipline</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Nyaya</b></td>
+	<td><ul><ul><li>one of the six darshana or systems of Indian philosophy</li> <li>logic</li> <li>recognition of the real spiritual experience by the omniscient mind</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Om Namah Shivaya</b></td>
+	<td><ul><ul><li>Shiva mantra</li> <li>'I salute Shiva (consciousness)'
+</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Om Namo Bhagavate Vasudeva</b></td>
+	<td><ul><ul><li>Krishna mantra</li> <li>'I salute Krishna (consciousness)'
+</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Om Namo Narayana</b></td>
+	<td><ul><ul><li>Narayan or Vishnu mantra</li> <li>I salute Narayan (consciousness)</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Padmasana</b></td>
+	<td><ul><ul><li>lotus pose</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Pancha klesha</b></td>
+	<td><ul><ul><li>five afflictions (ignorance, ego, attraction, aversion and fear of, death)</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Panchaka</b></td>
+	<td><ul><ul><li>five</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Pandavas</b></td>
+	<td><ul><ul><li>the five brothers in the Mahabharata epic</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Para nada</b></td>
+	<td><ul><ul><li>transcendental sound</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Param</b></td>
+	<td><ul><ul><li>supreme</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Paramakasha</b></td>
+	<td><ul><ul><li>one of the five mental spaces of vyoma panchaka</li> <li>deep, dark space with a twinkling star-like light</li> <li>state of shoonya, nothingness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Parigraha</b></td>
+	<td><ul><ul><li>collection</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Pashubhava</b></td>
+	<td><ul><ul><li>instinctive personality</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Pasyanti</b></td>
+	<td><ul><ul><li>mental</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Patanjali</b></td>
+	<td><ul><ul><li>ancient rishi who codified the meditative stages and states into the system of raja yoga</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Pawanmuktasana</b></td>
+	<td><ul><ul><li>series of wind releasing postures</li> <li>preliminary asana series</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Pingala nadi</b></td>
+	<td><ul><ul><li>major pranic channel in the body which conducts the dynamic force manifesting as prana shakti</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Pitta</b></td>
+	<td><ul><ul><li>bile,. One of the three humors described in ayurveda</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Pooraka</b></td>
+	<td><ul><ul><li>inhalation</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Poorna</b></td>
+	<td><ul><ul><li>full</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Poorna dhanurasana</b></td>
+	<td><ul><ul><li>full bow pose</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Poorva Mimamsa</b></td>
+	<td><ul><ul><li>one of the six darshana or systems of Indian philosophy in the form of answers</li> <li>contains theory of karma kanda or ritual</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Prajna</b></td>
+	<td><ul><ul><li>knowledge with awareness</li> <li>the seer who observes the state of nidra</li> <li>the all knowing</li> <li>what is known</li> <li>represents the 'M' of AUM</li> <li>awareness of the 'one without a second'</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Prakasha</b></td>
+	<td><ul><ul><li>light</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Prakasha mandala</b></td>
+	<td><ul><ul><li>white light at the center of ajna chakra</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Prakriti</b></td>
+	<td><ul><ul><li>individual nature</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Pramana</b></td>
+	<td><ul><ul><li>direct knowledge</li> <li>knowledge based on direct experience</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Prana</b></td>
+	<td><ul><ul><li>vital energy</li> <li>inherent vital force pervading every dimension of matter</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Prana mudra</b></td>
+	<td><ul><ul><li>a technique of raising the prana</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Prana nigraha</b></td>
+	<td><ul><ul><li>control of prana</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Prana shakti</b></td>
+	<td><ul><ul><li>dynamic solar force governing the dimension of matter</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Prana tattwa</b></td>
+	<td><ul><ul><li>third element representing the vital or life giving force</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Prana vidya</b></td>
+	<td><ul><ul><li>knowledge and control of prana</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Pranamaya kasha</b></td>
+	<td><ul><ul><li>energy sheath or body</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Pranava</b></td>
+	<td><ul><ul><li>mantra Aum</li> <li>primal sound vibration</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Pranava dhyana</b></td>
+	<td><ul><ul><li>meditation on the mantra Aum</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Pranayama</b></td>
+	<td><ul><ul><li>expansion of the range of vital energy</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Pranidhana</b></td>
+	<td><ul><ul><li>to believe in</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Pranothana</b></td>
+	<td><ul><ul><li>awakening of the pranas in the different chakras</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Pratishtha</b></td>
+	<td><ul><ul><li>awareness of identity</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Pratyahara</b></td>
+	<td><ul><ul><li>withdrawal of the mind from the senses</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Pratyaya</b></td>
+	<td><ul><ul><li>seeds or impressions in the field of consciousness, which do not disappear even in samadhi</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Pravrittis</b></td>
+	<td><ul><ul><li>four instincts</li> <li>(i) desire for food, (ii) desire for sleep</li> <li>(iii) desire to procreate and (iv) fear of death</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Prithvi</b></td>
+	<td><ul><ul><li>earth or matter</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Purusha</b></td>
+	<td><ul><ul><li>totality of consciousness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Purusharthas</b></td>
+	<td><ul><ul><li>{'four efforts which man must make in order to fulfill his individual existence': '(i) artha (wealth), (ii) kama (love), (iii) dharma (duty), (iv) moksha (liberation)'}</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Raga</b></td>
+	<td><ul><ul><li>attraction</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Rahita</b></td>
+	<td><ul><ul><li>without</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Raja yoga</b></td>
+	<td><ul><ul><li>yoga of awkening the psychic awareness and faculties through meditation</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Rajas</b></td>
+	<td><ul><ul><li>one of the three gunas</li> <li>dynamism</li> <li>state of activity and the creativity combined with full ego involvement</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Rakta</b></td>
+	<td><ul><ul><li>blood found in the body tissues</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Rasa</b></td>
+	<td><ul><ul><li>serum found in the body tissues</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Rechaka</b></td>
+	<td><ul><ul><li>exhalation</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Rishi</b></td>
+	<td><ul><ul><li>seer</li> <li>realized sage</li> <li>one who contemplates or meditates on the Self</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Rityam</b></td>
+	<td><ul><ul><li>the changing principle</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Roodan</b></td>
+	<td><ul><ul><li>the cry</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Roopa</b></td>
+	<td><ul><ul><li>form</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Rud</b></td>
+	<td><ul><ul><li>to cry</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Rudra</b></td>
+	<td><ul><ul><li>howling energy</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Rudra granthi</b></td>
+	<td><ul><ul><li>psychic knot or block between ajna and sahasrara chakras</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sabeeja samadhi</b></td>
+	<td><ul><ul><li>absorption with seed where the form of awareness remains</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sadhaka</b></td>
+	<td><ul><ul><li>spiritual aspirant</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sadhana</b></td>
+	<td><ul><ul><li>spiritual practice</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Saguna dhyana</b></td>
+	<td><ul><ul><li>meditation to develop awareness of the ttranscendental qualities</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sah</b></td>
+	<td><ul><ul><li>with</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sahaja</b></td>
+	<td><ul><ul><li>spontaneous</li> <li>easy</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sahaja samadhi</b></td>
+	<td><ul><ul><li>spontaneous meditative experience where the mind is totally withdrawn from the external world</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sahajoli mudra</b></td>
+	<td><ul><ul><li>contraction and release of the urinary passage in the female body to stimulate Swadhisthana chakra and promote brahmacharya</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sahasrara chakra</b></td>
+	<td><ul><ul><li>abode of Shiva or superconsciousness</li> <li>the thousand petalled lotus</li> <li>highest chakra or psychic center, which symbolizes the threshold between the psychic and spiritual realms</li> <li>located at the crown of the head</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sahita</b></td>
+	<td><ul><ul><li>combined with something</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sakama karma</b></td>
+	<td><ul><ul><li>ego-inspired actions</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sakshi</b></td>
+	<td><ul><ul><li>witness</li> <li>drashta aspect</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sam</b></td>
+	<td><ul><ul><li>perfect, balanced</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Samadhi</b></td>
+	<td><ul><ul><li>culmination of meditation</li> <li>state of unity with the object of meditation and the universal consciousness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Samana</b></td>
+	<td><ul><ul><li>one of the five sub-pranas</li> <li>situated between the navel and diaphragm</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Samapatti</b></td>
+	<td><ul><ul><li>complete absorption</li> <li>samadhi</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Samkhya</b></td>
+	<td><ul><ul><li>one of the six darshana or systems of Indian philosophy</li> <li>associated with yoga</li> <li>based on the division of existence into purusha, prakr</li> <li>ti and a number of elements</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Samprajnata samadhi</b></td>
+	<td><ul><ul><li>first sate of samadhi</li> <li>transcendental state where there is knowledge with awareness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Samskara</b></td>
+	<td><ul><ul><li>unconscious memories</li> <li>impressions that do not fit into the known categories of our present personality</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Samya</b></td>
+	<td><ul><ul><li>stillness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Samyam</b></td>
+	<td><ul><ul><li>harmonious control</li> <li>culmination of pratyahara, dharana and samadhi</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sanatan</b></td>
+	<td><ul><ul><li>eternal</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sankalpa</b></td>
+	<td><ul><ul><li>resolve</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sannyasa</b></td>
+	<td><ul><ul><li>renunciation</li> <li>dedication</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sannyasa ashram</b></td>
+	<td><ul><ul><li>fourth stage of life from 75 years onwards</li> <li>total renunciation</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sanskrit</b></td>
+	<td><ul><ul><li>language of the gods; original vedic language</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Santosha</b></td>
+	<td><ul><ul><li>contentment</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sapta</b></td>
+	<td><ul><ul><li>seven</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Saptavatan</b></td>
+	<td><ul><ul><li>awareness of seven things simultaneously</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Saraswati</b></td>
+	<td><ul><ul><li>goddess of learning</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sat</b></td>
+	<td><ul><ul><li>True</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Satchitananda</b></td>
+	<td><ul><ul><li>three divine attribrates of truth, consciousness and bliss</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Satkaara</b></td>
+	<td><ul><ul><li>with faith</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Satsang</b></td>
+	<td><ul><ul><li>gathering in which the ideals and principles of truth are discussed</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sattwa</b></td>
+	<td><ul><ul><li>one of the three gunas</li> <li>pure, unadulterated quality</li> <li>state of luminosity and harmony</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sattwic</b></td>
+	<td><ul><ul><li>pertaining to sattwa</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Satya</b></td>
+	<td><ul><ul><li>truth, reality</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Satyam</b></td>
+	<td><ul><ul><li>the unchanging principle</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Savdhan</b></td>
+	<td><ul><ul><li>attention</li> <li>alert</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Savichara samadhi</b></td>
+	<td><ul><ul><li>third state of samadhi where the mind alternates between time, space and object</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Savishesha dhyana</b></td>
+	<td><ul><ul><li>{'meditation with special qualities': 'awareness of the concept of Shakti as a powerful force equal to that of Brahman'}</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Savitarka samadhi</b></td>
+	<td><ul><ul><li>second state of samadhi where there is alternating association of the consciousness between word, knowledge and sensory perception</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shaiva</b></td>
+	<td><ul><ul><li>one who worships Shiva as the supreme reality</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shaivism</b></td>
+	<td><ul><ul><li>practice of worshipping Shiva</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shakta</b></td>
+	<td><ul><ul><li>one who worships the various manifestations of Shakti in the form of Kali, Saraswati, Durga etc.</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shakti</b></td>
+	<td><ul><ul><li>primal energy</li> <li>manifest consciousness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shaktism</b></td>
+	<td><ul><ul><li>practice of worshiping Shakti as the supreme reality</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shambhavi</b></td>
+	<td><ul><ul><li>name for Parvati, consort of Shiva</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shambhavi mudra</b></td>
+	<td><ul><ul><li>eyebrow center gazing</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shambhu</b></td>
+	<td><ul><ul><li>name for Shiva</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shankha mudra</b></td>
+	<td><ul><ul><li>conch Mudra</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shankhaprakshalana</b></td>
+	<td><ul><ul><li>cleaning the conch</li> <li>shatkarma that uses saline water to clean the small and large intestines</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shanmukhi mudra</b></td>
+	<td><ul><ul><li>closing the seven gates</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shat</b></td>
+	<td><ul><ul><li>six</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shatkarmas</b></td>
+	<td><ul><ul><li>group of six purificatory techniques of hatha yoga</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shaucha</b></td>
+	<td><ul><ul><li>cleanliness of the body</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sheetali pranayama</b></td>
+	<td><ul><ul><li>cooling breath</li> <li>breathing principle technique where the breath is drawn in through the folded tongue</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sheetkan pranayama</b></td>
+	<td><ul><ul><li>hissing breath</li> <li>practice of object drawing the breath in through clenched teeth</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shiva</b></td>
+	<td><ul><ul><li>pure consciousness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shodhana</b></td>
+	<td><ul><ul><li>purification</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shoonya</b></td>
+	<td><ul><ul><li>nothingness</li> <li>void</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shuddha</b></td>
+	<td><ul><ul><li>pure in nature</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shuddhata</b></td>
+	<td><ul><ul><li>virtue</li> <li>purity</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shuddhi</b></td>
+	<td><ul><ul><li>to purify</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Shukra, arthata</b></td>
+	<td><ul><ul><li>reproductive tissues in the body</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Siddha</b></td>
+	<td><ul><ul><li>perfected being</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Siddha yoni asana</b></td>
+	<td><ul><ul><li>female version of siddhasana</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Siddhasana</b></td>
+	<td><ul><ul><li>accomplished pose</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Siddhi</b></td>
+	<td><ul><ul><li>paranormal or supernormal accomplishment</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Simhasana</b></td>
+	<td><ul><ul><li>lion pose</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Smashan bhoomi</b></td>
+	<td><ul><ul><li>cremation ground</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Smritti</b></td>
+	<td><ul><ul><li>memory</li> <li>memory field</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Soham</b></td>
+	<td><ul><ul><li>mantra of the breath</li> <li>used in the practice of ajapa japa</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sthiti</b></td>
+	<td><ul><ul><li>condition</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sthoola</b></td>
+	<td><ul><ul><li>gross</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sukha poorvaka</b></td>
+	<td><ul><ul><li>simple preliminary practice</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sukhasana</b></td>
+	<td><ul><ul><li>easy pose</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sukshma</b></td>
+	<td><ul><ul><li>subtle dimension</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sumeru</b></td>
+	<td><ul><ul><li>mountain</li> <li>tassle on mala</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Surya</b></td>
+	<td><ul><ul><li>sun</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Surya bheda</b></td>
+	<td><ul><ul><li>pranayama that pierces and purifies the pingala nadi</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Surya mandala</b></td>
+	<td><ul><ul><li>image of the sun visualized at the eyebrow center</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Surya namaskara</b></td>
+	<td><ul><ul><li>salute to the sun</li> <li>series of 12 asanas for revitalizing prana</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Surya tantra</b></td>
+	<td><ul><ul><li>path of realization through visualization and evocation of the vital energy within the sun</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Surya vijnana</b></td>
+	<td><ul><ul><li>another name for surya tantra</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Suryakasha</b></td>
+	<td><ul><ul><li>one of the five mental spaces of vyoma panchaka</li> <li>luminous space of the sun or the soul</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sushumna</b></td>
+	<td><ul><ul><li>central nadi in the spine, which conducts the kundalini or spiritual force from mooladhara to sahasrara</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sutra</b></td>
+	<td><ul><ul><li>threads of thought which outline the ancient spiritual texts</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sutra neti</b></td>
+	<td><ul><ul><li>nasal cleansing using a catheter</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Sva, Swa</b></td>
+	<td><ul><ul><li>one's own</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Swadharma</b></td>
+	<td><ul><ul><li>acceptance of one's own duty in life</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Swadhisthana chakra</b></td>
+	<td><ul><ul><li>one's own abode</li> <li>second chakra associated with the sacral plexus</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Swadhyaya</b></td>
+	<td><ul><ul><li>self study</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Swami</b></td>
+	<td><ul><ul><li>master of the self</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Swapna</b></td>
+	<td><ul><ul><li>dream state</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Swara yoga</b></td>
+	<td><ul><ul><li>science of the breathing cycle</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Swastikasana</b></td>
+	<td><ul><ul><li>auspicious pose</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Tabla</b></td>
+	<td><ul><ul><li>Indian drums</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Tadroop pratishta</b></td>
+	<td><ul><ul><li>knowledge of true identity</li> <li>linking of name with form</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Tamas</b></td>
+	<td><ul><ul><li>one of the three gunas</li> <li>state of inertia or ignorance</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Tamasic</b></td>
+	<td><ul><ul><li>pertaining to tamas</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Tanmatra</b></td>
+	<td><ul><ul><li>nature, quality or essence of the five elements the sun visualized at</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Tantra</b></td>
+	<td><ul><ul><li>ancient, universal science and culture which deals with the transcendence of human nature from the present level of evolution and understanding to transcendental level of knowledge, experience and awareness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Tapas</b></td>
+	<td><ul><ul><li>austerity</li> <li>heat</li> <li>process of burning impurities</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Tarka</b></td>
+	<td><ul><ul><li>process of understanding through discussion and analysis</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Tat</b></td>
+	<td><ul><ul><li>that</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Tattwa</b></td>
+	<td><ul><ul><li>element</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Tattwakasha</b></td>
+	<td><ul><ul><li>one of the five mental spaces of vyoma panchaka</li> <li>elemental space of perfect stillness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Tattwamaasi</b></td>
+	<td><ul><ul><li>Thou Art That</li> <li>vedic mantra</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Teerthasthan</b></td>
+	<td><ul><ul><li>holy places of India</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Tejas</b></td>
+	<td><ul><ul><li>luminosity</li> <li>golden light or flame</li> <li>the seer who observes the state of swapna</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Tham, ksham</b></td>
+	<td><ul><ul><li>syllable or sound representing the sun or solar force</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Trataka</b></td>
+	<td><ul><ul><li>to gaze steadily</li> <li>dharana practice of gazing steadily at one point to focus the mind</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Trayate</b></td>
+	<td><ul><ul><li>freed, liberated</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Trimoorti dhyana</b></td>
+	<td><ul><ul><li>{'meditation on the three aspects of personality': 'sattwa, rajas and tamas'}</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Turiya</b></td>
+	<td><ul><ul><li>fourth dimension of consciousness</li> <li>super consciousness</li> <li>simultaneous awareness of all three states of consciousness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Tyaga</b></td>
+	<td><ul><ul><li>renunciation or gradual dissociation of the mind from worldly objects and from the seed of desire</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Udana</b></td>
+	<td><ul><ul><li>one of the five sub-pranas</li> <li>energy located in the extremities of the body arms,legs and head</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Uddiyana</b></td>
+	<td><ul><ul><li>to raise up', 'to fly up</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Uddiyana Bandha</b></td>
+	<td><ul><ul><li>lock applied to the abdomen which causes the diaphragm to rise into the chest, thereby directing prana into sushumna</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Ujjayi pranayama</b></td>
+	<td><ul><ul><li>psychic breathing performed by contracting the epiglottis, producing a light sonorous sound</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Upa-pranas</b></td>
+	<td><ul><ul><li>five minor pranas responsible for such actions as sneezing, yawning, itching, belching and blinking</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Upanishads</b></td>
+	<td><ul><ul><li>vedantic texts conveyed by ancient sages and seers containing their experiences and teachings on the ultimate reality</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Upanshu</b></td>
+	<td><ul><ul><li>whispered sound</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Upasana kanda</b></td>
+	<td><ul><ul><li>ritual of worship</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Usha pan</b></td>
+	<td><ul><ul><li>drinking water through the nose</li> <li>traditional form of cold water neti</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Uttara Mimamsa</b></td>
+	<td><ul><ul><li>one of the six darshana or systems of Indian philosophy which deals with the knowledge of ritual in the form of questions</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Utthita Lolasana</b></td>
+	<td><ul><ul><li>swinging while standing pose</li> <li>a pre-pranayama exercise</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vacha</b></td>
+	<td><ul><ul><li>speech</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vairagya</b></td>
+	<td><ul><ul><li>non-attachment</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vaisheshika</b></td>
+	<td><ul><ul><li>a treatise on the subtle, causal and atomic principles in relation to the five elements</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vaishnava</b></td>
+	<td><ul><ul><li>one who worships Vishnu in the form of Rama, Krishna, Narayana etc.</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vaishnavism</b></td>
+	<td><ul><ul><li>sect of Vishnu</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vaishwa</b></td>
+	<td><ul><ul><li>manifest universe</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vaishwanara</b></td>
+	<td><ul><ul><li>seer who observes the manifest universe or the, external, waking consciousness</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vajrasana</b></td>
+	<td><ul><ul><li>thunderbolt pose</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vajroli Mudra</b></td>
+	<td><ul><ul><li>contraction and release of the urinary passage in the male body to stimulate swadhisthana chakra and promote brahmacharya</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vama dhauti</b></td>
+	<td><ul><ul><li>method of cleaning the stomach by voluntary vomiting</li> <li>includes kunjal kriya and vyaghra Kriya</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vanaprastha ashrama</b></td>
+	<td><ul><ul><li>third stage of life from 50-75 years</li> <li>retirement from worldly life in order to practise sadhana in relative seclusion</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vashishtasana</b></td>
+	<td><ul><ul><li>balancing asana invented by Sage Vashishta</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vastra dhauti</b></td>
+	<td><ul><ul><li>cleansing of the stomach and esophagus, using a cloth</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vata</b></td>
+	<td><ul><ul><li>wind, one of the three humors described in ayurveda</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vata nadi</b></td>
+	<td><ul><ul><li>nadi running along the back of the neck and head into the brain</li> <li>controls gas formation and elimination</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vatsara dhauti</b></td>
+	<td><ul><ul><li>form of stomach cleansing performed by drinking air through the mouth and belching</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vayu</b></td>
+	<td><ul><ul><li>wind, prana</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vedanta</b></td>
+	<td><ul><ul><li>one of the six darshana or systems of Indian philosophy</li> <li>the end of perceivable knowledge</li> <li>the mind experiencing its own limits and going beyond them</li> <li>gaining realization and understanding of that exploration</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vedas</b></td>
+	<td><ul><ul><li>ancient spiritual texts of the Sanatan Dharma</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Veerabhava</b></td>
+	<td><ul><ul><li>warrior personality</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Veerasana</b></td>
+	<td><ul><ul><li>warrior pose (also known as the philosopher's pose or the thinker's pose)</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vichara</b></td>
+	<td><ul><ul><li>reflection</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vidya</b></td>
+	<td><ul><ul><li>knowledge</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vidyut mandala</b></td>
+	<td><ul><ul><li>visualization of lightning within the white light of prakash mandala</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vijnana</b></td>
+	<td><ul><ul><li>intuitive ability of mind</li> <li>higher understanding</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vijnanamaya kosha</b></td>
+	<td><ul><ul><li>higher mental sheath or body</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vikalpa</b></td>
+	<td><ul><ul><li>fancy</li> <li>unfounded belief</li> <li>imagination</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vikshepa</b></td>
+	<td><ul><ul><li>dissipation</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vipareeta</b></td>
+	<td><ul><ul><li>inverted</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vipareeta karani mudra</b></td>
+	<td><ul><ul><li>inverted psychic attitude</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Viparyaya</b></td>
+	<td><ul><ul><li>wrong knowledge</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vishaya</b></td>
+	<td><ul><ul><li>object</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vishnu granthi</b></td>
+	<td><ul><ul><li>psychic knot or block between manipura, anahata and vishuddhi chakras, symbolizing the bondage of personal and emotional attachment</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vishuddhi chakra</b></td>
+	<td><ul><ul><li>psychic center located at the level of the throat</li> <li>center of purification</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vishwa</b></td>
+	<td><ul><ul><li>eternal</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vitara</b></td>
+	<td><ul><ul><li>reasoning</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Viveka</b></td>
+	<td><ul><ul><li>right knowledge or understanding</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vrischikasana</b></td>
+	<td><ul><ul><li>scorpion pose</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vritti</b></td>
+	<td><ul><ul><li>circular movement of consciousness</li> <li>mental and modifications described in raja yoga</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vyaghra kriya</b></td>
+	<td><ul><ul><li>cleansing the stomach by voluntary vomiting using warm saline water (performed on a full stomach)</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vyakta</b></td>
+	<td><ul><ul><li>manifest</li> <li>seen</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vyakta prang</b></td>
+	<td><ul><ul><li>manifest life force</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vyana</b></td>
+	<td><ul><ul><li>one of the sub-pranas</li> <li>reserve of pranic energy pervading the whole body</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vyoma</b></td>
+	<td><ul><ul><li>space</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Vyoma Panchaka</b></td>
+	<td><ul><ul><li>the five subtle spaces</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Yam</b></td>
+	<td><ul><ul><li>beeja mantra of anahata chakra</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Yama</b></td>
+	<td><ul><ul><li>self-restraint, first step of ashtanga or raja yoga</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Yantra</b></td>
+	<td><ul><ul><li>visual form of mantra used for concentration and meditation</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Yoga angas</b></td>
+	<td><ul><ul><li>parts or aspects of yoga</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Yoga mudra</b></td>
+	<td><ul><ul><li>psychic union pose</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Yoga mudras</b></td>
+	<td><ul><ul><li>gestures, which help to channel the flow of prana in the body</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Yoga nidra</b></td>
+	<td><ul><ul><li>technique of yogic or psychic sleep which induces deep relaxation</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Yoga Sutras</b></td>
+	<td><ul><ul><li>ancient authorative text on raja yoga by Patanjali</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Yoni</b></td>
+	<td><ul><ul><li>womb, source</li></ul></ul></td>
+</tr>
+
+<tr>
+	<td><b>Yoni mudra</b></td>
+	<td><ul><ul><li>attitude by which the primal energy inherent in the womb, or source of creation, is invoked</li></ul></ul></td>
+</tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+		<div class="col-md-4">
+			<h3>Android App</h3>
+			<a href='https://play.google.com/store/apps/details?id=uk.org.padma.yogaglossary&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img width="300" alt='Get it on Google Play' src='https://play.google.com/intl/en_gb/badges/images/generic/en_badge_web_generic.png'/></a>
+			
+        </div>
+    </div>
+</div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+
+(function(){
+    'use strict';
+	var $ = jQuery;
+	$.fn.extend({
+		filterTable: function(){
+			return this.each(function(){
+				$(this).on('keyup', function(e){
+					$('.filterTable_no_results').remove();
+					var $this = $(this), search = $this.val().toLowerCase(), target = $this.attr('data-filters'), $target = $(target), $rows = $target.find('tbody tr');
+					if(search == '') {
+						$rows.show(); 
+					} else {
+						$rows.each(function(){
+							var $this = $(this);
+							$this.text().toLowerCase().indexOf(search) === -1 ? $this.hide() : $this.show();
+						})
+						if($target.find('tbody tr:visible').size() === 0) {
+							var col_count = $target.find('tr').first().find('td').size();
+							var no_results = $('<tr class="filterTable_no_results"><td colspan="'+col_count+'">No results found</td></tr>')
+							$target.find('tbody').append(no_results);
+						}
+					}
+				});
+			});
+		}
+	});
+	$('[data-action="filter"]').filterTable();
+})(jQuery);
+
+$(function(){
+    // attach table filter plugin to inputs
+	$('[data-action="filter"]').filterTable();
+	
+	$('.container').on('click', '.panel-heading span.filter', function(e){
+		var $this = $(this), 
+				$panel = $this.parents('.panel');
+		
+		$panel.find('.panel-body').slideToggle();
+		if($this.css('display') != 'none') {
+			$panel.find('.panel-body input').focus();
+		}
+	});
+	$('[data-toggle="tooltip"]').tooltip();
+})
+</script>
+  </body>
+</html>
