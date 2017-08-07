@@ -4,23 +4,27 @@
 - The `.yaml` files are in subdirectories under `yoga_glossary/`
 - eg [yoga_glossary/a/akashi_mudra.yaml](https://github.com/padmasambhava/yoga-glossary/blob/master/yoga_glossary/a/akashi_mudra.yaml)
 
+
 ### Downloads & Outputs
 
 - [yoga-glossary.json](yoga-glossary.json) - indented and human readable version
-- `yoga-glossary-min.json` - compact machine readable version
-- Visit the [android app](https://github.com/padmasambhava/yoga-glossary-android) to view on mobile
+- [yoga-glossary-min.json](yoga-glossary-min.json) - compact machine readable version
+- Android app project - [yoga-glossary-android](https://github.com/padmasambhava/yoga-glossary-android)
 
-## Overview
+<a href='https://play.google.com/store/apps/details?id=uk.org.padma.yogaglossary&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img width="300" alt='Get it on Google Play' src='https://play.google.com/intl/en_gb/badges/images/generic/en_badge_web_generic.png'/></a>
 
-This git repos contains a porposed yoga glossary,
-and stolen from [padmas Yoga Glossary page](http://www.padma.org.uk/tiki/tiki-index.php?page=Yoga%20Glossary)
+## Contribute
 
-All the terms are in individual yaml files in `yoga_glossary` directory.
+If you spot an error or omission, either:
+- Raise an [issue here](https://github.com/padmasambhava/yoga-glossary-android/issues)
+- Or submit a pull request
 
-### Mission
+## For Developers
 
-- The glossary is ripe for consolidation, and team community effort #1
-- All u yoga experts go in and fix the grammars, via pull requests
+- All the terms are in individual yaml files in `yoga_glossary` directory
+- python and fabric is required to compile the files
+- run `fab yg_build` to serialise out
+
 
 
 
